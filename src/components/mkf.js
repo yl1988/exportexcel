@@ -1,3 +1,4 @@
+import {saveAs} from 'file-saver'
 export function HZRecorder(stream, config) {
   config = config || {};
   config.sampleBits = config.sampleBits || 16;   //采样数位 8, 16
@@ -120,7 +121,7 @@ export function HZRecorder(stream, config) {
   //回放
   this.play = function (audio) {
     var blob=this.getBlob();
-    // saveAs(blob, "F:/3.wav");
+    saveAs(blob, "F:/3.wav");
     audio.src = window.URL.createObjectURL(this.getBlob());
   }
 
