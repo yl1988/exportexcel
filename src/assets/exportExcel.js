@@ -155,3 +155,4 @@ export function export_json_to_excel(th, data, defaultTitle) {
         type: "application/octet-stream"
     }), title + ".xlsx")
 }
+
